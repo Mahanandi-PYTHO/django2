@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>htmlform</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container" style="border:1px solid grey;padding:20px 20px;background-color:pink;">
+    <h2 style="text-align:center;"><i>List of Movies</i></h2>
+<form method="post" enctype="multipart/form-data" name="form" action="">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Movie name : </label>
+    <input type="txt" class="form-control" id="exampleFormControlInput1" name="mname" >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Hero :</label>
+ <input type="txt" class="form-control" id="exampleFormControlInput1" name="hero">
+  </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">Heroin : </label>
+    <input type="txt" class="form-control" id="exampleFormControlInput1" name="heroin" >
+  </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">Description : </label>
+         <textarea type="txt" class="form-control" id="exampleFormControlInput1" name="desc" ></textarea>
+  </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">Release Date : </label>
+    <input type="date" class="form-control" id="exampleFormControlInput1" name="date" >
+  </div>
+    <div class="form-group row">
+    <label for="Image" class="col-sm col-form-label"></label>
+    <div class="col-sm-12">
+       <input type="file" name="image" >
+    </div>
+</div>
+    <button type="submit"  name="add" class="btn btn-secondary">Add</button>
+    {% csrf_token %}
+</form>
+    </div>
+
+
+</body>
+</html>

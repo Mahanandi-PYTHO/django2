@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies_page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+<header>
+        <h4 style="padding-top:20px;padding-bottom:20px;background-color:black;color:white;text-align:center;"><i>Movies List</i></h4><br><br>
+</header>
+    {% for i in mve %}
+    <div class="row">
+    <div class="col-sm">
+        <img src="../media/{{i.mimage}}" width="100" height="100">
+    </div>
+    <div class="col-sm">
+        <p style="color:blue"><b>{{i.mtitle}}</b></p>
+        <p style="color:grey"><i>Actors : {{i.hero}},{{i.heroin}}</i></p>
+        <p style="color:red;">Release Date :{{ i.release_date }}</p>
+        <p></p>
+        <p></p>
+    </div>
+    <div class="col-sm">
+        <p style="color:grey;"><b>Description :</b></p>
+        <p>{{i.desc}}</p>
+    </div>
+  </div>
+
+{% endfor %}
+
+
+
+<footer>
+    <h6 style="padding-top:20px;padding-bottom:20px;background-color:black;color:white;text-align:center;">copy rights. support@gmail.com</i></h6></footer>
+</div>
+</body>
+</html

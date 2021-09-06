@@ -1,0 +1,35 @@
+{% extends 'jobs/base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="container" style="text-align:center;">
+     <h3 style="color:grey;text-align:left;">Looking for : </h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+  <img src="{% static 'images/javalogo.jpg'%}" class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <a href="{% url 'java' %}" class="btn btn-primary">Click on</a>
+  </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+  <img src="{% static 'images/pythonlogo.jpg'%}" class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <a href="{% url 'python' %}" class="btn btn-primary">Click on</a>
+</div>
+                 </div>
+             </div>
+            <div class="col-md-4">
+                 <div class="card">
+  <img src="{% static 'images/phplogo2.jpg'%}" class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <a href="{% url 'php' %}" class="btn btn-primary">Click on</a>
+</div>
+                 </div>
+            </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies_page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container" style="text-align:center">
+<header>
+        <h4 style="padding-top:20px;padding-bottom:20px;background-color:black;color:white;text-align:center;"><i> Update Movies List</i></h4><br><br>
+</header>
+    <form name="GET" method="post" enctype="multipart/form-data">
+
+
+        Movie_name : <input type="txt" name="mtitle" style="color:blue" value="{{ mve.mtitle }}"><br><br>
+         Hero :<input type="txt" name="hero" style="color:blue" value="{{ mve.hero }}"><br><br>
+         Heroin :<input type="txt" name="heroin" style="color:blue" value="{{ mve.heroin }}"><br><br>
+         Release_date :<input type="date" name="date" style="color:blue" value="{{ mve.release_date }}"><br><br>
+        Description :<input type="text-area" name="desc" value="{{ mve.desc }}"><br><br>
+        File :<input type="file"  value="{{ mve.mimage }}" name="mimage"><br><br>
+        <input type="submit" value="Save" name="add">
+
+    {% csrf_token %}
+</form>
+<footer>
+    <h6 style="padding-top:20px;padding-bottom:20px;background-color:black;color:white;text-align:center;">copy rights. support@gmail.com</i></h6></footer>
+</div>
+</body>
+</html>

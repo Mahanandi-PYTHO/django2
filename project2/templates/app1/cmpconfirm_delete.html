@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" style="text-align:center;border:1px  solid grey;">
+  <h5>Are you sure you want to delete</h5>
+    <form method="post">
+  <a href="{% url 'delete1' companies.id %}"><button type="submit">Yes</button>
+  </a>
+        {% csrf_token %}
+         <a href="{% url 'list1' %}">
+        <button type="button">No</button>
+    </a>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" name="frm" action="" enctype="multipart/form-data">
+
+      <div class="form-group row">
+          {{form.as_p}}
+    <label for="inputPassword" class="col-sm-4 col-form-label"></label>
+        <button type="submit" href="{% url 'list1' %}" name="add">Submit</button>
+  </div>
+  {% csrf_token %}
+</form>
+</body>
+</html>

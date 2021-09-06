@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+<form method="post" name="frm" action="" enctype="multipart/form-data">
+    {{form.as_p}}
+      <div class="form-group row">
+    <label for="inputPassword" class="col-sm-4 col-form-label"></label>
+        <button type="submit" href="{% url 'movies' %}" name="add">Submit</button>
+  </div>
+  {% csrf_token %}
+</form>
+</body>
+</html>

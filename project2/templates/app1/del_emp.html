@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<p>{{ emp.id }}</p>
+<form method="post" name="frm" action="" style="text-align:center;border:1px grey;">
+
+<div class="container" style="text-align:center">
+    <h4>Do you want to delete </h4><br><br>
+   <button type="button" class="btn btn-info" name="delete"  value="delete" ><a href="{% url 'delemp_conf' eid %}" > Yes</a></button>
+    <button type="button" class="btn btn-info" name="no" value="no"><a href="{% url 'employee'  %}" > No</a></button>
+
+</div>
+</form>
+    {% csrf_token %}
+
+
+</body>
+</html>

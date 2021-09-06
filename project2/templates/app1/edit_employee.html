@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+.center {
+  margin: auto;
+  width: 40%;
+  border: 2px solid grey;
+  padding: 10px;
+  border-radius: 20px;
+  background-color:pink;
+}
+</style>
+</head>
+<body>
+<h2 style="text-align:center">Update Emmployee Details</h2><br>
+<div class="container">
+    <div class="center">
+<form method="post" name="frm" action="" style="text-align:center;">
+    <p><label for="id_ename">Ename:</label> <input type="text" name="ename" maxlength="30" value="{{emp.ename}}" required id="id_ename" ></p>
+<p><label for="id_email">Email:</label> <input type="text" name="email" maxlength="50" value="{{emp.email}}" required id="id_email"></p>
+<p><label for="id_esalary">Esalary:</label> <input type="number" name="esalary" step="any" value="{{emp.esalary}}" required id="id_esalary"></p>
+
+    <button type="submit" value="Save"  class="btn btn-danger" name="add">Submit</button>
+
+
+    {% csrf_token %}
+
+</form>
+    </div>
+    </div>
+</body>
+</html>
