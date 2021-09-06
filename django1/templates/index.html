@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<div class ="card text-center">
+    <div class ="card-body">
+        <h1>Welcome To Pollster</h1>
+        <p>This is an example Django polling app</p>
+        <a class ="btn btn-dark" href ="{% url 'polls:index' %}">
+            View Available Polls</a>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

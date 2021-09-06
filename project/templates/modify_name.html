@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify</title>
+</head>
+<body>
+
+{% load custom_tags %}
+
+{{ author | modify_name:"first_name"}}<br>
+{{ author | modify_name:"last_name"}}<br>
+{{ author | modify_name:"title_case"}}<br>
+{{ author | modify_name:"first_name" | modify_name:"title_case"}}<br>
+
+{% current_time " %H:%M:%S %p" %}
+
+</body>
+</html>
